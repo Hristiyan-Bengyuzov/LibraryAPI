@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GenresModule } from './genres/genres.module';
+import { BooksModule } from './books/books.module';
 
 @Module({
   imports: [
@@ -23,6 +24,7 @@ import { GenresModule } from './genres/genres.module';
       inject: [ConfigService],
     }),
     GenresModule,
+    BooksModule,
   ],
   controllers: [],
   providers: [],
