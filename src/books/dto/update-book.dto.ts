@@ -4,4 +4,5 @@ import { CreateBookDto } from './create-book.dto';
 export class UpdateBookDto extends PartialType(CreateBookDto) {
   title: string;
   genreId: number;
+  authorId: number;
 }
