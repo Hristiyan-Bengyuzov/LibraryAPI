@@ -10,9 +10,9 @@ export class Book {
   @Column()
   title: string;
 
-  @ManyToOne(() => Genre, (genre) => genre.books)
+  @ManyToOne(() => Genre, (genre) => genre.books, { onDelete: 'CASCADE' })
   genre: Genre;
 
-  @ManyToOne(() => Author, (author) => author.books)
+  @ManyToOne(() => Author, (author) => author.books, { onDelete: 'CASCADE' })
   author: Author;
 }

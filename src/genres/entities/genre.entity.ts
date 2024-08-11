@@ -9,6 +9,6 @@ export class Genre {
   @Column()
   name: string;
 
-  @OneToMany(() => Book, (book) => book.genre)
+  @OneToMany(() => Book, (book) => book.genre, { cascade: true })
   books: Book[];
 }
