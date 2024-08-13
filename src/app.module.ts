@@ -4,6 +4,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { GenresModule } from './genres/genres.module';
 import { BooksModule } from './books/books.module';
 import { AuthorsModule } from './authors/authors.module';
+import { MembersModule } from './members/members.module';
 
 @Module({
   imports: [
@@ -27,6 +28,7 @@ import { AuthorsModule } from './authors/authors.module';
     GenresModule,
     BooksModule,
     AuthorsModule,
+    MembersModule,
   ],
   controllers: [],
   providers: [],
