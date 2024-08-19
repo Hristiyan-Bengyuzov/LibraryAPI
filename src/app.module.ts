@@ -5,6 +5,7 @@ import { GenresModule } from './genres/genres.module';
 import { BooksModule } from './books/books.module';
 import { AuthorsModule } from './authors/authors.module';
 import { MembersModule } from './members/members.module';
+import { RentalsModule } from './rentals/rentals.module';
 
 @Module({
   imports: [
@@ -29,6 +30,7 @@ import { MembersModule } from './members/members.module';
     BooksModule,
     AuthorsModule,
     MembersModule,
+    RentalsModule,
   ],
   controllers: [],
   providers: [],

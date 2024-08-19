@@ -1,4 +1,5 @@
-import { Column, Entity, PrimaryGeneratedColumn } from 'typeorm';
+import { Column, Entity, PrimaryGeneratedColumn, OneToMany } from 'typeorm';
+import { Rental } from 'src/rentals/entities/rental.entity';
 
 @Entity()
 export class Member {
@@ -13,4 +14,7 @@ export class Member {
 
   @Column()
   age: number;
+
+  @OneToMany(() => Rental, (rental) => rental.member)
+  rentals: Rental[];
 }
